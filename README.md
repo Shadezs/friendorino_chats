@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # chat_app_starter
 
 ## Directions
@@ -12,3 +13,7 @@ To run this project, you will need to complete the following workshops (found on
 
 ## Credits
 This tutorial was adapted from Google Codelab. 
+=======
+# friendorino_chat
+A small chat program that i made while in SEA 
+>>>>>>> refs/remotes/origin/master
