@@ -17,37 +17,49 @@
 
 // Signs-in Friendly Chat.
 function signIn() {
-    alert('TODO: Implement Google Sign-In');
-    // TODO 1: Sign in Firebase with credential from the Google user.
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
 }
 
 // Signs-out of Friendly Chat.
 function signOut() {
-    // TODO 2: Sign out of Firebase.
+    firebase.auth().signOut();
 }
 
 //Initialize firebase.
 function initFirebase() {
     // TODO
+    const firebaseConfig = {
+        apiKey: "AIzaSyCrFV_IXRsU_olj09PSGBNXcqhDS7YlclY",
+        authDomain: "friendorinochat.firebaseapp.com",
+        databaseURL: "https://friendorinochat.firebaseio.com",
+        projectId: "friendorinochat",
+        storageBucket: "friendorinochat.appspot.com",
+        messagingSenderId: "129197412803",
+        appId: "1:129197412803:web:e6a3ac96429f95e47b6d76",
+        measurementId: "G-PFVF7C0GYL"
+    };
 }
 // Initiate firebase auth.
 function initFirebaseAuth() {
-    // TODO 3: Initialize Firebase.
+    // Listen to auth state changes.
+    firebase.auth().onAuthStateChanged(authStateObserver);
 }
 
 // Returns the signed-in user's profile Pic URL.
 function getProfilePicUrl() {
-    // TODO 4: Return the user's profile pic URL.
+    return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
 }
+
 
 // Returns the signed-in user's display name.
 function getUserName() {
-    // TODO 5: Return the user's display name.
+    return firebase.auth().currentUser.displayName;
 }
 
 // Returns true if a user is signed-in.
 function isUserSignedIn() {
-    // TODO 6: Return true if a user is signed-in.
+    return !!firebase.auth().currentUser;
 }
 
 // Saves a new message on the Firebase DB.
