@@ -56,7 +56,7 @@
 </head>
 
 <body>
-    <header class="mdl-layout__header mdl-color-text--red-600	">
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
         <!-- Header section containing logo -->
         <header class="mdl-layout__header mdl-color-text--black mdl-color-text--red-600	">
@@ -85,23 +85,22 @@
                     <div class="mdl-card__supporting-text mdl-color-text--grey-600">
                         <div id="messages">
                         </div>
-                        <!---stuff-->
-                        <form id="message-form" action="#">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="message">
-                                <label class="mdl-textfield__label" for="message">Message...</label>
-                            </div>
-                            <button id="submit" disabled="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                          Send
-                          </button>
-                        </form>
-                        <form id="image-form" action="#">
-                            <input id="mediaCapture" type="file" accept="image/*" capture="camera">
-                            <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect .mdl-color-text--red-600	 mdl-color-text--white">
-                            <i class="material-icons">image</i>
-                          </button>
-                        </form>
                     </div>
+                    <form id="message-form" action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="message" autocomplete="off">
+                            <label class="mdl-textfield__label" for="message">Message...</label>
+                        </div>
+                        <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                          Send
+                        </button>
+                    </form>
+                    <form id="image-form" action="#">
+                        <input id="mediaCapture" type="file" accept="image/*" capture="camera">
+                        <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
+                          <i class="material-icons">image</i>
+                        </button>
+                    </form>
                 </div>
 
                 <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
@@ -109,30 +108,28 @@
                     <button class="mdl-snackbar__action" type="button"></button>
                 </div>
 
-
-                <form id="messages-form" action="#"></form>
             </div>
         </main>
-        </div>
+    </div>
 
-        <!-- Import and configure the Firebase SDK -->
-        <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
-        <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
 
-        <script src="/__/firebase/7.17.1/firebase-app.js"></script>
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
-        <!-- Initialize Firebase -->
-        <script src="/__/firebase/init.js"></script>
-        <script src="/__/firebase/7.16.1/firebase-auth.js"></script>
-        <script src="/__/firebase/7.16.1/firebase-storage.js"></script>
-        <script src="/__/firebase/7.16.1/firebase-messaging.js"></script>
-        <script src="/__/firebase/7.16.1/firebase-firestore.js"></script>
-        <script src="/__/firebase/7.16.1/firebase-performance.js"></script>
+    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/7.16.1/firebase-auth.js"></script>
+    <script src="/__/firebase/7.16.1/firebase-storage.js"></script>
+    <script src="/__/firebase/7.16.1/firebase-messaging.js"></script>
+    <script src="/__/firebase/7.16.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.16.1/firebase-performance.js"></script>
 
-        <script src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
