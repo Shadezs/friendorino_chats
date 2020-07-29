@@ -81,7 +81,7 @@ main,
 .message-container {
     display: block;
     margin-top: 10px;
-    border-top: 1px solid #f3f3f3;
+    border-top: 3px solid #4CAF50;
     padding-top: 10px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -150,7 +150,7 @@ main,
 }
 
 .mdl-card {
-    background: linear-gradient(white, #f9f9f9);
+    background: linear-gradient(#383030, #f1e8e8);
     justify-content: space-between;
 }
 
@@ -225,11 +225,11 @@ main,
 }
 
 .mdl-textfield__label:after {
-    background-color: #0288D1;
+    background-color: #1b9420;
 }
 
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: #0288D1;
+    color: #1da522;
 }
 
 .mdl-button .material-icons {
