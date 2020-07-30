@@ -20,7 +20,7 @@ function signIn() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
 }
-
+var perf = firebase.performance();
 // Signs-out of Friendly Chat.
 function signOut() {
     firebase.auth().signOut();
@@ -68,7 +68,7 @@ function saveMessage(messageText) {
         name: getUserName(),
         text: messageText,
         profilePicUrl: getProfilePicUrl(),
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        timestamp: firebase.firestore().FieldValue.serverTimestamp()
     });
 }
 
