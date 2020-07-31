@@ -64,11 +64,12 @@ function isUserSignedIn() {
 
 // Saves a new message on the Firebase DB.
 function saveMessage(messageText) {
+
     return firebase.firestore().collection('messages').add({
         name: getUserName(),
         text: messageText,
         profilePicUrl: getProfilePicUrl(),
-        timestamp: firebase.firestore().FieldValue.serverTimestamp()
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
     });
 }
 
@@ -175,13 +176,14 @@ function onMediaFileSelected(event) {
 function onMessageFormSubmit(e) {
     e.preventDefault();
     // Check that the user entered a message and is signed in.
-    if (messageInputElement.value && checkSignedInWithMessage()) {
+    if (messageInputElement.value && checkSignedInWithMessage() && messageInputElement.value.length <= 300) {
         saveMessage(messageInputElement.value).then(function() {
             // Clear message text field and re-enable the SEND button.
             resetMaterialTextfield(messageInputElement);
             toggleButton();
         });
     }
+
 }
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
@@ -244,7 +246,8 @@ var MESSAGE_TEMPLATE =
     '<div class="spacing"><div class="pic"></div></div>' +
     '<div class="message"></div>' +
     '<div class="name"></div>' +
-    '</div>';
+    '<div class="date"'
+'</div>';
 
 // Adds a size to Google Profile pics URLs.
 function addSizeToGoogleProfilePic(url) {
@@ -315,7 +318,7 @@ function displayMessage(id, timestamp, name, text, picUrl, imageUrl) {
         div.querySelector('.pic').style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(picUrl) + ')';
     }
 
-    div.querySelector('.name').textContent = name;
+    div.querySelector('.name').textContent = name + ' ' + timestamp.toDate();
     var messageElement = div.querySelector('.message');
 
     if (text) { // If the message is text.
@@ -340,6 +343,7 @@ function displayMessage(id, timestamp, name, text, picUrl, imageUrl) {
 // Enables or disables the submit button depending on the values of the input
 // fields.
 function toggleButton() {
+    updateCharactercount();
     if (messageInputElement.value) {
         submitButtonElement.removeAttribute('disabled');
     } else {
@@ -368,6 +372,20 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
+var txtFloater = document.getElementById('floater');
+var textCount = 0;
+
+function updateCharactercount() {
+    textCount = messageInputElement.value.length;
+    if (textCount > 0) {
+        txtFloater.innerText = textCount + " / 300";
+        console.log(textCount);
+    } else {
+        txtFloater.innerHTML = "Message...";
+    }
+
+}
+
 // initialize Firebase
 initFirebase();
 // Checks that Firebase has been imported.
@@ -380,7 +398,7 @@ signInButtonElement.addEventListener('click', signIn);
 
 // Toggle for the button.
 messageInputElement.addEventListener('keyup', toggleButton);
-messageInputElement.addEventListener('change', toggleButton);
+messageInputElement.addEventListener('change', () => toggleButton, updateCharactercount);
 
 // Events for image upload.
 imageButtonElement.addEventListener('click', function(e) {

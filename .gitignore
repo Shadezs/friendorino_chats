@@ -1,6 +1,7 @@
 .idea/
 gen/
 .DS_Store
+node_modules/
 Pods/
 Podfile.lock
 xcuserdata/
