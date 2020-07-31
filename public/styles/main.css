@@ -19,6 +19,12 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+p {
+    padding-top: 65px;
+    padding-left: -2000px;
+    margin-left: -208px;
+}
+
 main,
 #messages-card {
     height: 100%;
@@ -87,18 +93,18 @@ main,
     transition: opacity 1s ease-in-out;
 }
 
-    .message-container.visible {
-        opacity: 1;
-    }
+.message-container.visible {
+    opacity: 1;
+}
 
-    .message-container .pic {
-        background-image: url('/images/profile_placeholder.png');
-        background-repeat: no-repeat;
-        width: 30px;
-        height: 30px;
-        background-size: 30px;
-        border-radius: 20px;
-    }
+.message-container .pic {
+    background-image: url('/images/profile_placeholder.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    border-radius: 20px;
+}
 
 .mdl-layout__content {
     background: #5d5555;
@@ -176,24 +182,24 @@ main,
     padding-right: 10px;
 }
 
-    #user-container #user-pic {
-        top: -3px;
-        position: relative;
-        display: inline-block;
-        background-image: url('/images/profile_placeholder.png');
-        background-repeat: no-repeat;
-        width: 40px;
-        height: 40px;
-        background-size: 40px;
-        border-radius: 20px;
-    }
+#user-container #user-pic {
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    background-image: url('/images/profile_placeholder.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    border-radius: 20px;
+}
 
-    #user-container #user-name {
-        font-size: 16px;
-        line-height: 36px;
-        padding-right: 10px;
-        padding-left: 20px;
-    }
+#user-container #user-name {
+    font-size: 16px;
+    line-height: 36px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
 
 #image-form #submitImage {
     width: auto;
@@ -201,9 +207,9 @@ main,
     min-width: 0;
 }
 
-    #image-form #submitImage .material-icons {
-        top: -1px;
-    }
+#image-form #submitImage .material-icons {
+    top: -1px;
+}
 
 .message img {
     max-width: 300px;
@@ -219,7 +225,6 @@ main,
         height: 113px;
         padding-bottom: 80px !important;
     }
-
     #user-container {
         top: 72px;
         background-color: rgb(3, 155, 229);
@@ -227,13 +232,12 @@ main,
         padding-top: 3px;
         padding-right: 2px;
     }
-
-        #user-container #user-pic {
-            top: 2px;
-            width: 33px;
-            height: 33px;
-            background-size: 33px;
-        }
+    #user-container #user-pic {
+        top: 2px;
+        width: 33px;
+        height: 33px;
+        background-size: 33px;
+    }
 }
 
 .mdl-textfield__label:after {
