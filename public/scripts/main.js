@@ -243,9 +243,8 @@ function resetMaterialTextfield(element) {
 // Template for messages.
 var MESSAGE_TEMPLATE =
     '<div class="message-container">' +
-    '<div class="spacing"><div class="pic"></div></div>' +
+    '<div class="spacing"><div class="pic"></div></div>' + '<div class="name"></div>' +
     '<div class="message"></div>' +
-    '<div class="name"></div>' +
     '<div class="date"'
 '</div>';
 
