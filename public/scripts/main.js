@@ -317,7 +317,8 @@ function displayMessage(id, timestamp, name, text, picUrl, imageUrl) {
     if (picUrl) {
         div.querySelector('.pic').style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(picUrl) + ')';
     }
-
+    let timedate = timestamp.toDate();
+    console.log(timedate[3]);
     div.querySelector('.name').textContent = name + ' ' + timestamp.toDate();
     var messageElement = div.querySelector('.message');
 
@@ -360,20 +361,20 @@ function checkSetup() {
     }
 }
 // Shortcuts to DOM Elements.
-var messageListElement = document.getElementById('messages');
-var messageFormElement = document.getElementById('message-form');
-var messageInputElement = document.getElementById('message');
-var submitButtonElement = document.getElementById('submit');
-var imageButtonElement = document.getElementById('submitImage');
-var imageFormElement = document.getElementById('image-form');
-var mediaCaptureElement = document.getElementById('mediaCapture');
-var userPicElement = document.getElementById('user-pic');
-var userNameElement = document.getElementById('user-name');
-var signInButtonElement = document.getElementById('sign-in');
-var signOutButtonElement = document.getElementById('sign-out');
-var signInSnackbarElement = document.getElementById('must-signin-snackbar');
-var txtFloater = document.getElementById('floater');
-var textCount = 0;
+const messageListElement = document.getElementById('messages');
+const messageFormElement = document.getElementById('message-form');
+const messageInputElement = document.getElementById('message');
+const submitButtonElement = document.getElementById('submit');
+const imageButtonElement = document.getElementById('submitImage');
+const imageFormElement = document.getElementById('image-form');
+const mediaCaptureElement = document.getElementById('mediaCapture');
+const userPicElement = document.getElementById('user-pic');
+const userNameElement = document.getElementById('user-name');
+const signInButtonElement = document.getElementById('sign-in');
+const signOutButtonElement = document.getElementById('sign-out');
+const signInSnackbarElement = document.getElementById('must-signin-snackbar');
+const txtFloater = document.getElementById('floater');
+let textCount = 0;
 
 function updateCharactercount() {
     textCount = messageInputElement.value.length;
