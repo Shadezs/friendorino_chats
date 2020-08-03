@@ -15,5 +15,13 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## TO DO
+Add chanell and the ability to create new ones
+
+Add Direct Messeges between users.
+
+Add Discord login option.
+
+Add private channels.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
