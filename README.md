@@ -1,3 +1,19 @@
-# friendorino_chat
-A small chat program that i made while in SEA.
+# Friendorino Chat
 
+Friendorino chat is a chat app where user can chat with friends
+
+
+## Usage
+User can login using Google
+
+User can send Images.
+
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
