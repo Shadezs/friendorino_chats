@@ -7,7 +7,13 @@ Friendorino chat is a chat app where user can chat with friends.
 ## Installation
 
 ```bash
+npm install -g firebase-tools
 git clone https://github.com/Shadezs/friendorino_chats.git
+```
+To deploy locally
+
+```bash
+firebase serve --only hosting
 ```
 ## Tools use
 Javascript, HTML/CSS, Material Design, Firebase
