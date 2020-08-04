@@ -1,11 +1,13 @@
 # Friendorino Chat
 
 Friendorino chat is a chat app where user can chat with friends
+## Installation
 
-
+```bash
+git clone https://github.com/Shadezs/friendorino_chats.git
+```
 ## Tools use
 Javascript, HTML/CSS, Material Design, Firebase
-
 
 ## Usage
 User can login using Google
