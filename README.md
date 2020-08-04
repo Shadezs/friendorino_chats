@@ -3,6 +3,10 @@
 Friendorino chat is a chat app where user can chat with friends
 
 
+## Tools use
+Javascript, HTML/CSS, Material Design, Firebase
+
+
 ## Usage
 User can login using Google
 
