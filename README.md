@@ -1,6 +1,6 @@
 # Friendorino Chat
 Friendorino chat is a chat app where user can chat with friends.
-!img(https://github.com/Shadezs/friendorino_chats/blob/master/BANNER.PNG)
+![img](https://github.com/Shadezs/friendorino_chats/blob/master/BANNER.PNG)
 ## Installation
 
 ```bash
